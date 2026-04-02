@@ -1,0 +1,31 @@
+:root { --bg:#f3f3f3; --cell:#e0e0e0; --cell-open:#ddd; --cell-border:#999; --cell-flag:#f06; --cell-mine:#000; }
+*{box-sizing:border-box;}
+body{margin:0;font-family:Helvetica,Arial,sans-serif;background:linear-gradient(135deg,#aaccff,#eef);min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:20px;}
+.container{width:min(100%,640px);background:white;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:16px;}
+h1{text-align:center;margin:0 0 12px;}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin-bottom:8px;}
+.controls label{font-size:14px;color:#333;}
+.controls input{width:56px;margin-left:4px;border:1px solid #999;border-radius:4px;padding:2px;text-align:center;}
+button{border:none;background:#4a90e2;color:white;padding:6px 12px;border-radius:6px;cursor:pointer;font-weight:700;}
+button:hover{background:#3576bd;}
+.tips{font-size:13px;color:#555;margin-bottom:6px;text-align:center;}
+.status{font-size:14px;color:#1f4b77;text-align:center;margin-bottom:8px;}
+.board{display:grid;gap:2px;user-select:none;background:#888;justify-content:center;}
+.cell{width:30px;height:30px;background:#b2b2b2;border:2px solid #8a8a8a;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#000;cursor:pointer;transition:background .18s, transform .15s, border-color .18s;}
+.cell:hover{transform:scale(1.04);border-color:#666;}
+.cell.open{background:#fff;border-color:#ccc;cursor:default;transform:none;}
+.cell.flag{background:#e04a4a;color:white;}
+.cell.mine{background:#ff9999;color:black;}
+.cell.open.mine{background:#ec3a3a;color:#fff;}
+.cell.open[data-value="1"]{color:#0000ee;}
+.cell.open[data-value="2"]{color:#007f00;}
+.cell.open[data-value="3"]{color:#ff0000;}
+.cell.open[data-value="4"]{color:#000080;}
+.cell.open[data-value="5"]{color:#800000;}
+.cell.open[data-value="6"]{color:#008080;}
+.cell.open[data-value="7"]{color:#000;}
+.cell.open[data-value="8"]{color:#808080;}
+.flag-mode{display:inline-block; margin-left: 8px; border:1px solid #4a90e2; padding:.2rem .5rem; border-radius:5px; background:#def; color:#124; font-size:13px;}
+.flag-mode.active{background:#4a90e2;color:#fff;}
+.status.success{color:#d19e00;text-shadow:0 0 5px rgba(255,215,0,0.9),0 0 10px rgba(255,215,0,0.8);font-size:18px;font-weight:800;}
+.status.fail{color:#c42f2f;font-size:18px;font-weight:800;}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>扫雷游戏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>扫雷 Mini</h1>
+    <div class="controls">
+      <label>行数 <input id="rows" type="number" min="5" max="30" value="10" /></label>
+      <label>列数 <input id="cols" type="number" min="5" max="30" value="10" /></label>
+      <label>雷数 <input id="mines" type="number" min="1" max="200" value="15" /></label>
+      <button id="new-game">新游戏</button>
+      <button id="reveal-all">揭开全部</button>
+    </div>
+    <div class="tips">提示：单击格子打开，右上角“标雷模式”开启后单击可标/取消旗子。可使用键盘 F 切换模式。</div>
+    <div class="status" id="status">状态：准备开始</div>
+    <div class="board" id="board"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
